@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #CCE0AC;
+}
+
+header {
+    background-color: #FF8A8A;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav a {
+    margin: 5px 10px;
+    padding: 5px;
+    text-decoration: none;
+    color: #737e4d;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #737e4d; 
+    color: #ffffff; 
+    border-radius: 5px; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.content {
+    width: 65%;
+}
+
+.stats {
+    width: 30%;
+    background: #CCE0AC;
+    padding: 15px;
+    border: 2px solid #737e4d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 3px solid #737e4d;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #FF8A8A;
+    color: white;
+}
+
+
+/* Tombol Edit */
+a.edit-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #007BFF; /* Warna biru untuk edit */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.edit-btn:hover {
+    background-color: #0056b3; /* Biru lebih gelap saat hover */
+}
+
+/* Tombol Delete */
+a.delete-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #FF4D4D; /* Warna merah untuk delete */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.delete-btn:hover {
+    background-color: #cc0000; /* Merah lebih gelap saat hover */
+}

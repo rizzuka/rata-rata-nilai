@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+        <h2>Daftar Mahasiswa</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Aksi</th>
+            </tr>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.score }}</td>
+                <td>
+                    <a href="{{ url_for('edit', id=student.id) }}" class="edit-btn">Edit</a>
+                    <a href="{{ url_for('delete', id=student.id) }}" class="delete-btn" onclick="return confirm('Yakin ingin menghapus?')">Delete</a>
+                </td>                
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <aside class="stats">
+        <h3>Statistik Nilai</h3>
+        <p>Rata-rata: {{ stats.average }}</p>
+        <p>Median: {{ stats.median }}</p>
+        <p>Nilai Tertinggi: {{ stats.max }}</p>
+        <p>Nilai Terendah: {{ stats.min }}</p>
+        <p>Standar Deviasi: {{ stats.std_dev }}</p>
+        <p>Modus: {{ stats.mode }}</p>
+
+        <ul>
+            <li>A (≥ 85): {{ stats.distribution.A }}</li>
+            <li>B (70–84): {{ stats.distribution.B }}</li>
+            <li>C (55–69): {{ stats.distribution.C }}</li>
+            <li>D (< 55): {{ stats.distribution.D }}</li>
+        </ul>
+    </aside>
+    
+</div>
+{% endblock %}
